@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row-6">
+        <div class="row mx-lg-1 my-lg-1">
+        <a href="request_1" class="btn btn-outline-primary" role="button">
+            Создать отчет о работе водителей в марте 2017 года по форме: Уникальный номер водителя, фамилия водителя, общее количество отработанных часов.
+        </a>
+        </div>
+        <div class="row mx-lg-1 my-lg-1">
+        <a href="request_2"  class="btn btn-outline-primary" role="button">
+            Покажите фамилии всех водителей, которые работали на маршруте с названием ХХХ в марте 2017.
+        </a>
+        </div>
+        <div class="row mx-lg-1 my-lg-1">
+        <a href="request_3"  class="btn btn-outline-primary" role="button">
+            Покажите фамилии водителей, которые пока не совершили ни одного выхода на работу.
+        </a>
+        </div>
+        <div class="row mx-lg-1 my-lg-1">
+        <a href="request_4"  class="btn btn-outline-primary" role="button">
+            Покажите фамилии водителей, которые ни разу не выходили на работу в марте 2013 года.
+        </a>
+        </div>
+        <div class="row mx-lg-1 my-lg-1">
+        <a href="request_5" class="btn btn-outline-primary" role="button">
+            Покажите все сведения о водителе с самым большим стажем работы.
+        </a>
+        </div>
+        <div class="row mx-lg-1 my-lg-1">
+        <a href="request_6" class="btn btn-outline-primary" role="button">
+            Найти все сведения о водителе, который чаще всех работал на маршруте XXX в марте 2013 (с использованием view)
+        </a>
+        </div>
+    </div>
+
+    <div class="row-2" style="width: 400px">
+
+        {% include 'main_page_utils/form_for_procedure.html' %}
+
+    </div>
+{% endblock %}

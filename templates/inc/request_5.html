@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <p>You submitted the following data</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">driver_id</th>
+                    <th scope="col">driver_surname</th>
+                    <th scope="col">birth</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for driver in drivers %}
+                <tr>
+                    <td>{{ driver['id'] }}</td>
+                    <td>{{ driver['driver_name'] }}</td>
+                    <td>{{ driver['driver_surname'] }}</td>
+                    <td>{{ driver['birth'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <p>You submitted the following data</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">report_way</th>
+                    <th scope="col">report_year</th>
+                    <th scope="col">report_month</th>
+                    <th scope="col">tickets_num</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in rows %}
+                <tr>
+                    <td>{{ row['report_way'] }}</td>
+                    <td>{{ row['report_year'] }}</td>
+                    <td>{{ row['report_month'] }}</td>
+                    <td>{{ row['tickets_num'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+{% endblock %}
